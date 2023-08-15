@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --para-size: 16px;
+  --font-famiy: "Red Hat Display", sans-serif;
+}
+img {
+  height: 100%;
+  object-fit: fill;
+  width: 100%;
+}
+body {
+  font-family: var(--font-famiy);
+  background-color: var(--pale-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  min-height: 100vh;
+}
+.container {
+  background-color: white;
+  border-radius: 15px;
+  /*max-width: 25rem;*/
+}
+.image-container,
+.image-container img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+/*.image-container {*/
+/*  margin-bottom: 2rem;*/
+/*}*/
+.info-center {
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  gap: 1.5rem;
+}
+.info-center h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.info-center p {
+  font-size: var(--para-size);
+  color: var(--desaturated-blue);
+  margin-bottom: 1.25rem;
+  line-height: 1.4rem;
+}
+.price-tag {
+  background-color: var(--very-pale-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*gap: 5rem;*/
+  margin-bottom: 1.25rem;
+  padding: 0.95rem 0.75rem;
+  border-radius: 15px;
+}
+.price-tag div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem 0.75rem;
+}
+.price-tag div img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.info-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info-tag span {
+  display: inline-block;
+}
+.info-tag > span:first-child {
+  font-weight: bold;
+}
+.info-tag > span:last-child {
+  color: var(--desaturated-blue);
+}
+.price-tag > h6 {
+  text-decoration: underline;
+  font-size: 0.85rem;
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+.price-tag > h6:active {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+.buttons > * {
+  padding: 0.75rem 0;
+  font-weight: 700;
+  font-family: var(--font-famiy);
+  border: none;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.buttons > *:first-child {
+  color: white;
+  background: var(--bright-blue);
+}
+.buttons > *:first-child:active {
+  background-color: mediumpurple;
+}
+.buttons > *:last-child {
+  background-color: white;
+  color: var(--pale-blue);
+}
+.buttons > *:last-child:active {
+  color: black;
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 25rem;
+  }
+}
